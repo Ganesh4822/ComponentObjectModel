@@ -1,0 +1,81 @@
+lecture 29,30,31 AUGust
+lecture 5,6,7 sept
+
+
+
+To understand flow of classFactory program
+
+hr = CoCreateInstance(CLSID_SumSubtract,NULL,CLSCTX_INPROC_SERVER,IID_ISum,(void**)&pISum);
+
+HRESULT __stdcall CoCreateInstance(const IID &rclsid, LPUNKNOWN pUnkOuter, DWORD dwClsContext, const IID &riid, LPVOID *ppv)
+{
+    //Variable declaration 
+    IClassFactory* pIClassFactory = NULL;
+    HRESULT hr ;
+
+    //Code//CLSID_SumSubtract,CLSCTX_INPROC_SERVER,
+    hr = CoGetClassObject(rclsid,dwClsContext,NULL,IID_IClassFactory,&pIClassFactory);->coLoadLibrary->LoadLibrary
+
+    if(SUCCEEDED(hr))
+    {
+        pIClassFactory->CreateInstance(pUnkOuter,riid,ppv);
+        pIClassFactory->Realease();
+
+    }
+    return hr;
+}
+
+80040154
+
+Class IUNkown{
+    
+    HRESULT QueryInterface(RIID,void** ppv) = 0;
+}
+
+Class ISUM : public IUNkown
+{
+    void sumoftwoInteger(int , int ,int*) = 0;
+    HRESULT QueryInterface(RIID,void** ppv) = 0;
+}
+
+class Csum : publkic ISUM
+{
+    QueryInterface(){
+
+    }
+
+    sumoftwoInteger{
+
+    }
+
+}
+
+IS
+
+
+class Human
+{
+    private:
+        Human* this;
+        bool gender;
+        float height;
+
+    public:
+        Human(bool _gender, float _height)
+        {
+            gender = _gender;
+            height = _height;
+        }
+
+        float getHeight()
+        {
+            return this->height;
+        }
+
+};
+
+
+Human Shivani(1000,1, 5.4);
+
+Shivani.getHeight(this);
+

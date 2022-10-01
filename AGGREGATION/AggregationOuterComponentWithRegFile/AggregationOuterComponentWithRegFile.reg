@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{28FCFC72-B4E0-4DFC-B8BF-964ED85C1E38}]
+@="OuterDll"
+[HKEY_CLASSES_ROOT\CLSID\{28FCFC72-B4E0-4DFC-B8BF-964ED85C1E38}\InprocServer32]
+@="C:\\Windows\\System32\\AggregationOuterComponentWithRegFile.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{6FAC6CE2-00B2-4A45-92C4-A6A0ADACF603}]
+@="InnerDll"
+[HKEY_CLASSES_ROOT\CLSID\{6FAC6CE2-00B2-4A45-92C4-A6A0ADACF603}\InprocServer32]
+@="C:\\Windows\\System32\\AggregationInnerComponentWithRegFile.dll"
