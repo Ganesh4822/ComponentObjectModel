@@ -1,0 +1,1 @@
+tlbimp.exe C:\Windows\System32\AutomationServerTypeLib.tlb out:.\AutomationServerTypelibForDotNet.dll
